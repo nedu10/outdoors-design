@@ -1,0 +1,33 @@
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main{
+        display: block;
+        font-weight: 400;
+        font-size: 6rem;
+        letter-spacing: 3rem;
+
+        /* initializing animation */
+        animation-name: moveInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out
+
+    }
+    
+    &--sub{
+        display: block;
+        font-weight: 700;
+        font-size: 2rem;
+        letter-spacing: 1.74rem;
+        /* initializing animation */
+        animation-name: moveInRight;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out
+        /* animation-delay: 3s; animation waits 3s before it starts functioning */
+        /* animation-iteration-count: 3; does the animation 3 times */
+    }
+}

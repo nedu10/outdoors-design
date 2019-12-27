@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after{/* setting reset settings*/
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /*so it will inherit from the box sizing of the body for all element*/
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 2rem;
+    box-sizing: border-box; /*so that padding and borders do not contribute to the overall width of an element*/
+}

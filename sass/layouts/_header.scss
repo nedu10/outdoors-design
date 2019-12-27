@@ -1,0 +1,33 @@
+.header{
+    height: 90vh;
+    /* background-image: linear-gradient(to right, #7ed56f, #28b485),url(../img/hero.jpg) */
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-lighter, 0.698), 
+        rgba($color-primary-darker, 0.698)
+        ),
+        url(../img/hero.jpg); /* gradient move from top left to bottom right*/
+    background-size: cover; 
+    background-position: top; /* Top of the image stays the same as we crop the image*/
+    clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%);
+    position: relative;
+
+
+    &__logo-box{
+        position: absolute;
+        /* padding: 1rem; */
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+    &__logo{
+        height: 3.5rem
+    }
+    
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* relation to the element itself*/
+        text-align: center
+    }
+}
