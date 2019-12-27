@@ -1,0 +1,35 @@
+.composition{
+    position: relative;
+    &__photo{
+        width: 55%;
+        position: absolute;
+        border-radius: 1rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 1.5rem; //outline works like border but it gives us a space between the border and the content
+
+        &--p1{
+            top: -2rem;
+            left: 0;
+        }
+        &--p2{
+            top: 5rem;
+            right: 0;
+        }
+        &--p3{
+            top: 12rem;
+            right: 20%;
+        }
+        &:hover{
+            box-shadow: 0 2rem 5rem rgba($color-black, .6);
+            transform: scale(1.05) translateY(-1rem);
+            outline: 1rem solid $color-primary;
+            z-index: 20;
+        }
+    }
+    &:hover &__photo:not(:hover){
+        transform: scale(.9);
+    }
+
+}
