@@ -2,7 +2,6 @@
     max-width: $grid-width; //we are using 1140px and max-width so that iff the view port is less than the width given it will take 100%
     //of the available width
     margin: 0 auto; //means that the margin on top and bottom is 0 but the left and right is centered with the available space
-    background-color: #eee;
     @include clearfix;
 
     &:not(:last-child){
@@ -13,8 +12,6 @@
         padding: 2rem;
         float: left;
         margin: 0 auto;
-        color: #eee;
-        background-color: orangered;
         &:not(:last-child){
             margin-right: $gutter-horizontal;
         }
