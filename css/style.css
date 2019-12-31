@@ -78,7 +78,7 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   font-weight: 700;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #ff3399, #c20479);
   text-transform: uppercase;
   display: inline-block;
   -webkit-background-clip: text;
@@ -117,7 +117,7 @@ body {
 .header {
   height: 90vh;
   /* background-image: linear-gradient(to right, #7ed56f, #28b485),url(../img/hero.jpg) */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.698), rgba(40, 180, 133, 0.698)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 51, 153, 0.698), rgba(194, 4, 121, 0.698)), url(../img/hero.jpg);
   /* gradient move from top left to bottom right*/
   background-size: cover;
   background-position: top;
@@ -138,6 +138,41 @@ body {
     transform: translate(-50%, -50%);
     /* relation to the element itself*/
     text-align: center; }
+
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.6rem; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #eee;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #f504ad;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3); }
+  .footer__copywright {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    width: 80%; }
 
 .row {
   max-width: 114rem;
@@ -214,9 +249,9 @@ body {
 
 .btn--green {
   color: #fff;
-  background-color: #55c57a; }
+  background-color: #f504ad; }
   .btn--green::after {
-    background-color: #55c57a; }
+    background-color: #f504ad; }
 
 .btn::after {
   content: "";
@@ -238,10 +273,10 @@ body {
   /* apply the style of the zero percent before the animation starts*/ }
 
 .btn-text:link, .btn-text:visited {
-  color: #55c57a;
+  color: #f504ad;
   text-decoration: none;
   font-size: 1.6rem;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #f504ad;
   padding-bottom: 3px;
   padding: 0 .3rem;
   display: inline-block;
@@ -249,7 +284,7 @@ body {
 
 .btn-text:hover {
   color: #fff;
-  background-color: #55c57a;
+  background-color: #f504ad;
   transform: translateY(-0.5rem);
   box-shadow: 0 0.5rem 0.2rem rgba(119, 119, 119, 0.2); }
 
@@ -279,7 +314,7 @@ body {
     .composition__photo:hover {
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
       transform: scale(1.05) translateY(-1rem);
-      outline: 1rem solid #55c57a;
+      outline: 1rem solid #f504ad;
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
@@ -296,7 +331,7 @@ body {
   .feature-box__icon {
     font-size: 7rem;
     margin-bottom: .5rem;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-image: linear-gradient(to right, #ff3399, #c20479);
     -webkit-background-clip: text;
     color: transparent; }
   .feature-box:hover {
@@ -317,7 +352,7 @@ body {
     transition: all .2s;
     border: 1px solid #ccc; }
     .form__field:focus {
-      border-bottom: 3px solid #55c57a;
+      border-bottom: 3px solid #f504ad;
       outline: none;
       box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
       transform: translateY(-0.5rem); }
@@ -351,7 +386,7 @@ body {
     top: 0;
     left: 0;
     border-radius: 50%;
-    border: 3px solid #55c57a;
+    border: 3px solid #f504ad;
     transform: translateY(-0.5rem); }
     .form__radio-button::after {
       content: "";
@@ -362,7 +397,7 @@ body {
       transform: translate(-50%, -50%);
       width: 1.4rem;
       height: 1.4rem;
-      background-color: #55c57a;
+      background-color: #f504ad;
       border-radius: 50%;
       opacity: 0;
       transition: all .2s; }
@@ -396,7 +431,7 @@ body {
     .card__side--p1 {
       background-image: linear-gradient(to right bottom, rgba(255, 124, 75, 0.7), rgba(255, 69, 0, 0.7)); }
     .card__side--p2 {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)); }
+      background-image: linear-gradient(to right bottom, rgba(255, 51, 153, 0.7), rgba(194, 4, 121, 0.7)); }
     .card__side--p3 {
       background-image: linear-gradient(to right bottom, rgba(66, 54, 255, 0.7), rgba(2, 1, 193, 0.7)); }
   .card:hover .card__side--front {
@@ -412,7 +447,7 @@ body {
     .card__picture--p1 {
       background-image: linear-gradient(to right bottom, #ff7c4b, #ff4500), url(../img/nat-5.jpg); }
     .card__picture--p2 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, #ff3399, #c20479), url(../img/nat-6.jpg); }
     .card__picture--p3 {
       background-image: linear-gradient(to right bottom, #4236ff, #0201c1), url(../img/nat-7.jpg); }
   .card__text {
@@ -434,7 +469,7 @@ body {
       background-image: linear-gradient(to right bottom, rgba(255, 124, 75, 0.85), rgba(255, 69, 0, 0.85)); }
     .card__text-break--p2 {
       padding: .5rem .5rem;
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(255, 51, 153, 0.85), rgba(194, 4, 121, 0.85)); }
     .card__text-break--p3 {
       padding: .5rem .5rem;
       background-image: linear-gradient(to right bottom, rgba(66, 54, 255, 0.85), rgba(2, 1, 193, 0.85)); }
@@ -526,7 +561,7 @@ body {
   padding: 12rem 0;
   transform: skewY(-7deg);
   margin-top: -10rem;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.698), rgba(40, 180, 133, 0.698)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 51, 153, 0.698), rgba(194, 4, 121, 0.698)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top; }
   .section-features > * {
@@ -543,7 +578,7 @@ body {
 
 .section-book {
   padding: 8rem 0;
-  background-image: linear-gradient(to bottom right, #7ed56f, #28b485); }
+  background-image: linear-gradient(to bottom right, #ff3399, #c20479); }
 
 .book {
   background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 50%, transparent 50%), url(../img/nat-10.jpg);
