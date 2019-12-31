@@ -13,7 +13,7 @@
         border-radius: 3px;
         border: none;
         transition: all .2s;
-        border-bottom: 3px solid transparent;
+        border: 1px solid #ccc;
 
         &:focus{
             border-bottom: 3px solid $color-primary;
@@ -42,5 +42,51 @@
         visibility: hidden;
         transform: translateY(-4px)
     }
+
+    //for the radio button;
+    &__radio-label{
+        font-size: $default-font-size;
+        position: relative;
+        cursor: pointer;
+        padding-left: 3rem;
+    }
+    &__radio-group{
+        width: 45%;
+        display: inline-block;
+
+    }
+    // &__radio-group:focus &__
+    &__radio-button{
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        border: 3px solid $color-primary;
+        transform: translateY(-.5rem);
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1.4rem;
+            height: 1.4rem;
+            background-color: $color-primary;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all .2s;
+        }
+    }
+    &__radio-input{
+        display: none;
+    }
+    &__radio-input:checked + &__radio-label &__radio-button:after { //direct sibling selector the select the child
+        opacity: 1;         //Note the after here still refers to the after stated above
+    }
+
 
 }
