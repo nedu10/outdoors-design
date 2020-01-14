@@ -1,0 +1,150 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  //Brgining of functionality
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    width: 100vw;
+    opacity: 1;
+  }
+
+  //End of functionality
+
+  &__button {
+    position: fixed;
+    text-align: center;
+    width: 7rem;
+    height: 7rem;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgb(151, 150, 150);
+    cursor: pointer;
+  }
+  &__background {
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    top: 6.5rem;
+    right: 6.5rem;
+    cursor: pointer;
+    background-image: radial-gradient(
+      $color-primary-lighter,
+      $color-primary-darker
+    );
+    z-index: 1000; //this only works in a situation where you specify the position of an element
+    // transform: scale(80);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    opacity: 0;
+    height: 100vh;
+    z-index: 1500;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+  }
+  &__item {
+    margin: 1rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-white;
+      font-weight: 400;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        rgba($color-white, 0.85) 50%
+      );
+      background-size: 230%;
+      transition: all 0.4s ease-out;
+    }
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary-darker;
+      transform: translateX(1.5rem);
+    }
+  }
+
+  //icon
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 3px;
+      background-color: #444444;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    //note only white space in the selector when it is a child of the element
+    //use the + sign when it is a direct sibling of the element
+    // us the ~ sgn when it is a sibling of the element
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon:before {
+    top: 0;
+    transform: rotateZ(135deg);
+  }
+  &__checkbox:checked + &__button &__icon:after {
+    top: 0;
+    transform: rotateZ(-135deg);
+  }
+}
+
+//Note
+//transform-origin: ; this can take left right or center. the center is the default behavior
+//which makes it to rotate the element about the center.
+// setting it to the laft rotates the element about the lrft side of the element and setting it to the right does vise vesa
